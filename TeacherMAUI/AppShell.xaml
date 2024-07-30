@@ -8,20 +8,17 @@
 
     Shell.FlyoutBehavior="Disabled"
     Title="TeacherMAUI">
-
-    <ShellContent
+    <FlyoutItem>  <!--tabbed view items in this-->
+        <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-    <TabBar>
+        Route="MainPage"  />
+        <!--Main Page Content Tab -->
+            <ShellContent
+        Title="Add"
+        ContentTemplate="{DataTemplate local:AdditionTestPage}"
+        Route="AdditionPage"  />
+        <!-- Addition Page Content Tab -->
 
-        <Tab Title="Main">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
-        </Tab>
-
-        <Tab Title="Add Element">
-            <ShellContent ContentTemplate="{DataTemplate local:AdditionTestPage}" />
-        </Tab>
-        <Tab></Tab>
-    </TabBar>
+    </FlyoutItem>
 </Shell>

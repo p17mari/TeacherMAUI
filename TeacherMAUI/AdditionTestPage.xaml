@@ -36,12 +36,7 @@
 
             <Label Text="Enter when the Chaperoning Ends" TextColor="black"/>
             <TimePicker x:Name="endchaperonEntry" TextColor="black"/>
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+            
         </VerticalStackLayout>
     </ScrollView>
 
