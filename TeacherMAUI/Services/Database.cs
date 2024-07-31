@@ -75,6 +75,15 @@ namespace TeacherMAUI.Services
         {
             return _database.InsertAsync(efhmeria);
         }
+        public Task<List<Exei>> GetExeisAsync()  //establishing getlist for ui feedback for table efhmeria
+        {
+            return _database.Table<Exei>().ToListAsync();
+        }
+
+        public Task<int> SaveExeiAsync(Exei exei) //establishing save for insertion of row in table efhmeria
+        {
+            return _database.InsertAsync(exei);
+        }
 
     }
 

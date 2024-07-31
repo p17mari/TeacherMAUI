@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TeacherMAUI.AdditionTestPage">
+             x:Class="TeacherMAUI.AdditionExeiPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -13,11 +13,13 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Label Text="Enter where you are chaperoning" TextColor="black"/>
-            <Entry x:Name="locationEntry" TextColor="black"/>
+            <Label Text="Enter the group you are teaching to"/>
+            <Entry x:Name="tmimaEntry"/>
+            <Label Text="Enter what you are teaching"/>
+            <Entry x:Name="lessonEntry"/>
 
-            <Label Text="Enter which Day you are teaching" TextColor="black"/>
-            <Picker x:Name="dayEntry" TextColor="black">
+            <Label Text="Enter which Day you are teaching"/>
+            <Picker x:Name="dayEntry">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Sunday</x:String>
@@ -31,12 +33,18 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Label Text="Enter when the Chaperoning Starts" TextColor="black"/>
-            <TimePicker x:Name="startchaperonEntry" TextColor="black"/>
+            <Label Text="Enter when the Chaperoning Starts"/>
+            <TimePicker x:Name="startchaperonEntry"/>
 
-            <Label Text="Enter when the Chaperoning Ends" TextColor="black"/>
-            <TimePicker x:Name="endchaperonEntry" TextColor="black"/>
-            
+            <Label Text="Enter when the Chaperoning Ends"/>
+            <TimePicker x:Name="endchaperonEntry"/>
+
+            <Button
+             x:Name="AddLessonBtn"
+             Text="Add Lesoon" 
+             Clicked="OnLessonClicked"
+            HorizontalOptions="Fill" />
+
         </VerticalStackLayout>
     </ScrollView>
 

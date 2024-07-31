@@ -57,25 +57,36 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Raw\Efhmeria.json" />
+	  <None Remove="Resources\Raw\Exei.json" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+		<PackageReference Include="System.Text.Json" Version="8.0.4" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="ViewModels\" />
-	  <Folder Include="Views\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="AdditionTestPage.xaml.cs">
-	    <DependentUpon>AdditionTestPage.xaml</DependentUpon>
+	  <Compile Update="Views\AdditionExeiPage.xaml.cs">
+	    <DependentUpon>AdditionExeiPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\AdditionEfhmeriaPage.xaml.cs">
+	    <DependentUpon>AdditionEfhmeriaPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AdditionTestPage.xaml">
+	  <MauiXaml Update="Views\AdditionExeiPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AdditionEfhmeriaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
