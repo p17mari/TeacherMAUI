@@ -62,15 +62,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.71" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.71" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 		<PackageReference Include="System.Text.Json" Version="8.0.4" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -79,6 +75,9 @@
 	  </Compile>
 	  <Compile Update="Views\AdditionEfhmeriaPage.xaml.cs">
 	    <DependentUpon>AdditionEfhmeriaPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\TestPage.xaml.cs">
+	    <DependentUpon>TestPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -89,6 +88,13 @@
 	  <MauiXaml Update="Views\AdditionEfhmeriaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TestPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
-﻿using TeacherMAUI.Models;
-using TeacherMAUI.Services;
+﻿using TeacherMAUI.Services;
 
 namespace TeacherMAUI
 {

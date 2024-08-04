@@ -6,9 +6,7 @@ namespace TeacherMAUI
 {
     public partial class AdditionExeiPage : ContentPage
     {
-        int count = 0;
-
-        public AdditionExeiPage()
+          public AdditionExeiPage()
         {
             InitializeComponent();
         }

@@ -19,10 +19,16 @@
         ContentTemplate="{DataTemplate local:AdditionEfhmeriaPage}"
         Route="AdditionEfhmeriaPage"  />
         <!-- Addition Page Content Tab -->
-        <ShellContent
+           <ShellContent
         Title="Add Lesson"
         ContentTemplate="{DataTemplate local:AdditionExeiPage}"
         Route="AdditionExeiPage"  />
         <!-- Addition Page Content Tab -->
+        <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:TestPage}"
+        Route="TestPage"  />
+        <!-- Test Page Content Tab -->
+
     </FlyoutItem>
 </Shell>
