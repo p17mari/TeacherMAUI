@@ -5,7 +5,7 @@ namespace TeacherMAUI
 {
     public partial class AdditionEfhmeriaPage : ContentPage
     {
-        int count = 0;
+    
 
         public AdditionEfhmeriaPage()
         {

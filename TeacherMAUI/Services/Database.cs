@@ -1,10 +1,4 @@
 ﻿using SQLite;
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TeacherMAUI.Models;
 
 namespace TeacherMAUI.Services
@@ -17,7 +11,7 @@ namespace TeacherMAUI.Services
         {
             bool dbExists = File.Exists(dbPath); //boolean that checks if there is a file that exists in dbPath
             _database = new SQLiteAsyncConnection(dbPath);// establishes new database connection to dbpath
-             
+
 
             if (!dbExists) //checks if a database DOESNT exist
             {
@@ -29,7 +23,7 @@ namespace TeacherMAUI.Services
 
             }
 
-            
+
         }
 
         private static async void CreateTables(SQLiteAsyncConnection dbConnection)

@@ -12,11 +12,19 @@
                 <model:Exei Day="Monday"/>
                 <model:Exei Day="Tuesday"/>
                 <model:Exei Day="Wednesday"/>
+                <model:Exei Day="Thursday"/>
+                <model:Exei Day="Friday"/>
             </x:Array>
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>
-            <DataTemplate>
-                
+            <DataTemplate x:DataType="model:Exei">
+                <HorizontalStackLayout>
+                    <Label Text="{Binding Day}"/>
+                    <Label Text="{Binding Lesson}"/>
+                    <Label Text="{Binding Tmima}"/>
+                    <Label Text="{Binding Starts}"/>
+                    <Label Text="{Binding Ends}"/>
+                </HorizontalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
