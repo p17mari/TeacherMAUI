@@ -6,4 +6,4 @@ You will find diagrams explaining the projects database here
 ([Database Details](https://github.com/p17mari/TeacherMAUI/blob/master/walkthrough/Database-Details.md))
 and UI diagrams for the finished product here([UI-mockup](https://github.com/p17mari/TeacherMAUI/blob/master/walkthrough/UI-Details.md).)
 
-If any questions for this project please contact me.
+If you have any questions for this project please contact me.
