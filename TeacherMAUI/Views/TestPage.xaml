@@ -18,13 +18,18 @@
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="model:Exei">
-                <HorizontalStackLayout>
-                    <Label Text="{Binding Day}"/>
-                    <Label Text="{Binding Lesson}"/>
-                    <Label Text="{Binding Tmima}"/>
-                    <Label Text="{Binding Starts}"/>
-                    <Label Text="{Binding Ends}"/>
-                </HorizontalStackLayout>
+
+                    <Label VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} | {1}">
+                                <Binding Path="Day" />
+                                <Binding Path="Lesson" />
+                                <Binding Path="TimeStarts" />
+                                <Binding Path="TimeEnds" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
