@@ -3,11 +3,11 @@ using TeacherMAUI.Models;
 
 namespace TeacherMAUI.Services
 {
-    public class Database
+    public class DatabaseService
     {
 
         readonly SQLiteAsyncConnection _database; //establishes database connection
-        public Database(string dbPath)
+        public DatabaseService(string dbPath)
         {
             bool dbExists = File.Exists(dbPath); //boolean that checks if there is a file that exists in dbPath
             _database = new SQLiteAsyncConnection(dbPath);// establishes new database connection to dbpath
@@ -74,9 +74,20 @@ namespace TeacherMAUI.Services
             return _database.Table<Exei>().ToListAsync();
         }
 
-        public Task<int> SaveExeiAsync(Exei exei) //establishing save for insertion of row in table efhmeria
+        public Task<int> SaveExeiAsync(Exei exei) //establishing save and update for insertion of row in table efhmeria
         {
-            return _database.InsertAsync(exei);
+            if (exei.Id != 0)
+            {
+                return _database.UpdateAsync(exei);
+            }
+            else
+            {
+                return _database.InsertAsync(exei);
+            }
+        }
+        public Task<int> DeleteExeiAsync(Exei exei)//establishing delete for removing row in the table Exei
+        {
+            return _database.DeleteAsync(exei);
         }
 
     }
