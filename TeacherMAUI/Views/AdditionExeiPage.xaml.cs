@@ -13,10 +13,10 @@ namespace TeacherMAUI
 
         async void OnLessonClicked(object sender, EventArgs e)//does the commands in the brackets when onlessonclicked button got clicked
         {
-            if (!string.IsNullOrWhiteSpace(tmimaEntry.Text) && !(startchaperonEntry == null) && !(endchaperonEntry == null) && !(dayEntry == null))//does the code in the brackets if the input is not null
+            if (!string.IsNullOrWhiteSpace(tmimaEntry.Text) && !(startlessonEntry == null) && !(endlessonEntry == null) && !(dayEntry == null))//does the code in the brackets if the input is not null
             {
-                TimeSpan timeEnds = endchaperonEntry.Time;//saving endchaperonentry in timeEnds
-                TimeSpan timeStarts = startchaperonEntry.Time;//saving startchaperonentry in timeStarts
+                TimeSpan timeEnds = endlessonEntry.Time;//saving endclessonentry in timeEnds
+                TimeSpan timeStarts = startlessonEntry.Time;//saving startlessonentry in timeStarts
                 string selectedDay = (string)dayEntry.SelectedItem;//saving dayEntry in selectedDay
 
                 await App.Database.SaveExeiAsync(new Exei //calling SaveExei for insertion of codebinded input

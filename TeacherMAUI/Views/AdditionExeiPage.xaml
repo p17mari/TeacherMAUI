@@ -9,7 +9,7 @@
             Spacing="25">
 
             <Label
-                Text="Hello, World!"
+                Text="Add Lesson Form!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
@@ -33,11 +33,11 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Label Text="Enter when the Chaperoning Starts"/>
-            <TimePicker x:Name="startchaperonEntry"/>
+            <Label Text="Enter when the Lesson Starts"/>
+            <TimePicker x:Name="startlessonEntry"/>
 
-            <Label Text="Enter when the Chaperoning Ends"/>
-            <TimePicker x:Name="endchaperonEntry"/>
+            <Label Text="Enter when the Lesson Ends"/>
+            <TimePicker x:Name="endlessonEntry"/>
 
             <Button
              x:Name="AddLessonBtn"
