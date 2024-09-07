@@ -19,7 +19,7 @@ namespace TeacherMAUI
                 TimeSpan timeStarts = startchaperonEntry.Time;//saving startchaperonentry in timeStarts
                 string selectedDay = (string)dayEntry.SelectedItem;//saving dayEntry in selectedDay
 
-                await App.Database.SaveExeiAsync(new Exei//calling SaveExei for insertion of codebinded input
+                await App.Database.SaveExeiAsync(new Exei //calling SaveExei for insertion of codebinded input
                 {
                     Tmima = tmimaEntry.Text,//inserting the Tmima the class is being taught
                     Lesson = lessonEntry.Text,//inserting the Lesson the class is being taught
