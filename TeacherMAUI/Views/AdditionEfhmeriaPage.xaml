@@ -9,7 +9,7 @@
             Spacing="25">
 
             <Label
-                Text="Hello, World!"
+                Text="Chaperoning Form!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
