@@ -18,6 +18,7 @@ namespace TeacherMAUI
                 TimeSpan timeEnds = endlessonEntry.Time;//saving endclessonentry in timeEnds
                 TimeSpan timeStarts = startlessonEntry.Time;//saving startlessonentry in timeStarts
                 string selectedDay = (string)dayEntry.SelectedItem;//saving dayEntry in selectedDay
+                string nameEntry= tmimaEntry.Text + " | " + lessonEntry.Text;
 
                 await App.Database.SaveExeiAsync(new Exei //calling SaveExei for insertion of codebinded input
                 {

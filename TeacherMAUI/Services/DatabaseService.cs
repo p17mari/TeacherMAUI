@@ -1,4 +1,6 @@
 ﻿using SQLite;
+using System.Collections.Generic;
+using System.Linq;
 using TeacherMAUI.Models;
 
 namespace TeacherMAUI.Services
@@ -37,7 +39,7 @@ namespace TeacherMAUI.Services
 
             await dbConnection.CreateTableAsync<Exei>(); //creates table for Exei
 
-
+          
 
         }
 
@@ -76,14 +78,15 @@ namespace TeacherMAUI.Services
                 return _database.InsertAsync(efhmeria);
             }
         }
-        public Task<List<Exei>> GetExeisAsync()  //establishing getlist for ui feedback for table efhmeria
-        {
-            return _database.Table<Exei>().ToListAsync();
-        }
 
         public Task<int> DeleteEfhmeriaAsync(Efhmeria efhmeria)//establishing delete for removing row in the table EEfhmeria
         {
             return _database.DeleteAsync(efhmeria);
+        }
+
+        public Task<List<Exei>> GetExeisAsync()  //establishing getlist for ui feedback for table efhmeria
+        {
+            return _database.Table<Exei>().ToListAsync();
         }
 
         public Task<int> SaveExeiAsync(Exei exei) //establishing save and update for insertion of row in table efhmeria
@@ -101,7 +104,7 @@ namespace TeacherMAUI.Services
         {
             return _database.DeleteAsync(exei);
         }
-
+       
 
     }
 

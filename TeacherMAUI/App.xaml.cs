@@ -4,7 +4,7 @@ namespace TeacherMAUI
 {
     public partial class App : Application
     {
-        public static DatabaseService Database { get; private set; }//getting data commands from DataService.cs
+        public static DatabaseService  Database { get; private set; }//getting data commands from DataService.cs
         public App()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace TeacherMAUI
             MainPage = new AppShell();
         }
 
-
+            
        
     }
 }

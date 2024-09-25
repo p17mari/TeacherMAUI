@@ -3,35 +3,56 @@
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:TeacherMAUI.Models"
-             x:Class="TeacherMAUI.TestPage">
-
-    <CollectionView>
-
-        <CollectionView.ItemsSource>
-            <x:Array Type="{x:Type model:Exei}">
-                <model:Exei Day="Monday"/>
-                <model:Exei Day="Tuesday"/>
-                <model:Exei Day="Wednesday"/>
-                <model:Exei Day="Thursday"/>
-                <model:Exei Day="Friday"/>
-            </x:Array>
-        </CollectionView.ItemsSource>
-        <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="model:Exei">
-
-                    <Label VerticalOptions="Center">
-                        <Label.Text>
-                            <MultiBinding StringFormat="{}{0} | {1}">
-                                <Binding Path="Day" />
-                                <Binding Path="Lesson" />
-                                <Binding Path="TimeStarts" />
-                                <Binding Path="TimeEnds" />
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
-
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-
+             x:Class="TeacherMAUI.TestPage"
+                 x:Name="TestName">
+    <Grid RowDefinitions="Auto,*"  Padding="10">
+        <!--<Button Text="Add New Exei" Clicked="OnAddClicked" Grid.Row="0" />-->
+   
+        <RefreshView Grid.Row="1" x:Name="ExeiRefreshView" Refreshing="OnRefreshing">
+            <CollectionView x:Name="ExeiListView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Exei">
+                        <Frame Margin="0,0,0,10" 
+                                Padding="10" 
+                                CornerRadius="10" 
+                                HasShadow="True"
+                                BackgroundColor="White">
+                            <Grid Padding="10" RowDefinitions="Auto,Auto" ColumnDefinitions="*, Auto, Auto">
+                    
+                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                                       FontSize="18" FontAttributes="Bold" TextColor="#333333">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="Day" />
+                                            <Binding Path="Lesson" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label Grid.Row="1" Grid.Column="0" TextColor="#666666">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}Time: {0} - {1}">
+                                            <Binding Path="Starts" StringFormat="{}{0:HH:mm}" />
+                                            <Binding Path="Ends" StringFormat="{}{0:HH:mm}" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Button Grid.Row="1" Grid.Column="1" 
+                                    Text="Edit" 
+                                    BackgroundColor="#2196F3"
+                                    Command="{Binding Source={x:Reference TestName}, Path=EditCommand}"
+                                    CommandParameter="{Binding .}" 
+                                    Margin="0,0,5,0" />
+                                <Button Grid.Row="1" Grid.Column="2"  
+                                    Text="Delete" 
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Command="{Binding Source={x:Reference TestName}, Path=DeleteCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
 </ContentPage>
