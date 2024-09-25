@@ -57,8 +57,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="Views\UpdateEfhmeriaPage.xaml" />
+	  <MauiXaml Remove="Views\UpdateExeiPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Raw\Efhmeria.json" />
 	  <None Remove="Resources\Raw\Exei.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Views\UpdateEfhmeriaPage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Views\UpdateExeiPage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -78,6 +92,9 @@
 	  </Compile>
 	  <Compile Update="Views\TestPage.xaml.cs">
 	    <DependentUpon>TestPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\UpdateEfhmeriaPage.xaml.cs">
+	    <DependentUpon>UpdateEfhmeriaPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeacherMAUI.Views.UpdateExeiPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout
+         Padding="30,0"
+         Spacing="25">
+
+                <Label
+             Text="Update Lesson Form!"
+             Style="{StaticResource Headline}"/>
+
+                <Label Text="Enter the group you are teaching to"/>
+                <Entry x:Name="tmimaEntry"/>
+                <Label Text="Enter what you are teaching"/>
+                <Entry x:Name="lessonEntry"/>
+
+                <Label Text="Enter which Day you are teaching"/>
+                <Picker x:Name="dayEntry"/>
+
+                <Label Text="Enter when the Lesson Starts"/>
+                <TimePicker x:Name="startlessonEntry"/>
+
+                <Label Text="Enter when the Lesson Ends"/>
+                <TimePicker x:Name="endlessonEntry"/>
+
+                <Button Text="Save" Clicked="OnSaveClicked" Margin="0,20,0,0" />
+                <Button Text="Cancel" Clicked="OnCancelClicked" Margin="0,10,0,0" />
+
+            </VerticalStackLayout>
+         </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

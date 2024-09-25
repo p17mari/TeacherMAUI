@@ -10,8 +10,7 @@
 
             <Label
                 Text="Add Lesson Form!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                Style="{StaticResource Headline}"/>
 
             <Label Text="Enter the group you are teaching to"/>
             <Entry x:Name="tmimaEntry"/>

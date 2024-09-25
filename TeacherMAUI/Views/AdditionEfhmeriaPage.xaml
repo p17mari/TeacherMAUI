@@ -10,8 +10,7 @@
 
             <Label
                 Text="Chaperoning Form!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                Style="{StaticResource Headline}"/>
 
             <Label Text="Enter where you are chaperoning"/>
             <Entry x:Name="locationEntry" />
